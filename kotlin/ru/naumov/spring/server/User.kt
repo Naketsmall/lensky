@@ -26,7 +26,7 @@ class User: Runnable {
         connectButton.click()
 
         //load second page
-        while(waitForPreview(driver)){
+        while(!waitForPreview(driver)){
             Thread.sleep(1000)
         }
         Thread.sleep(5000)
@@ -69,7 +69,9 @@ class User: Runnable {
 
     private fun defineDriver(): ChromeDriver {
         val opt = ChromeOptions()
+        //opt.setBinary(System.getenv("GOOGLE_CHROME_BIN"))
         opt.addArguments(options)
+        //System.setProperty(property, System.getenv("CHROMEDRIVER_PATH"))
         System.setProperty(property, pathToDriver)
         return ChromeDriver(opt)
     }
@@ -77,10 +79,10 @@ class User: Runnable {
     private fun waitForTaking(driver: ChromeDriver): Boolean {
         return try {
             driver.findElement(By.className("controls-container"))
-            println(" $name     Is waiting...")
+            println(" $name     Is waiting for taking...")
             true
         } catch (e: Exception){
-            println("Entered")
+            println(" $name     Entered to meeting...")
             false
         }
     }
@@ -95,11 +97,11 @@ class User: Runnable {
     private fun waitForPreview(driver: ChromeDriver): Boolean {
         return try {
             driver.findElements(By.className(permissionsClassName))
-            println("Entered")
-            false
-        } catch (e: Exception){
-            println("Is waiting...")
+            println(" $name     Entered to preview...")
             true
+        } catch (e: Exception){
+            println(" $name     Is waiting for preview...")
+            false
 
         }
     }

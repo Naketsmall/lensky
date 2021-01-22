@@ -7,6 +7,7 @@ package ru.naumov.spring.server
 //defineDriver
 val options = listOf("disable-infobars", "ignore-certificate-errors", "start-maximized","use-fake-ui-for-media-stream")
 const val property = "webdriver.chrome.driver"
+
 const val pathToDriver = "C:/ChromeDriver/chromedriver.exe"
 
 
