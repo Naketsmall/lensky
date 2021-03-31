@@ -4,6 +4,7 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
+import ru.naumov.spring.config.*
 
 class User: Runnable {
 
@@ -91,7 +92,7 @@ class User: Runnable {
         val membersButton = driver.findElement(By.id("roster-button"))
         membersButton.click()
         val members = driver.findElements(By.id(membersId))
-        return members.size
+        return members.size 
     }
 
     private fun waitForPreview(driver: ChromeDriver): Boolean {

@@ -5,19 +5,20 @@ import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import ru.naumov.spring.server.User
-import ru.naumov.spring.server.ura
-import ru.naumov.spring.server.urb
-import ru.naumov.spring.server.urc
+import ru.naumov.spring.config.ura
+import ru.naumov.spring.config.urb
+import ru.naumov.spring.config.urc
 
 @Controller
 class FirstController{
 
     @GetMapping("/connect")
     fun connectPage(@RequestParam("name") name: String,
-                    @RequestParam("url") url: String, @RequestParam("deepLinkId") deepLinkId: String,
+                    @RequestParam("url") url: String,// @RequestParam("deepLinkId") deepLinkId: String,
                     model: Model): String {
         println(url)
-        val link = createLink(url, deepLinkId)
+        //val link = createLink(url, deepLinkId)
+        val link = createLink(url, "") //Параметр deepLinkId в последних версиях teams перестал использоваться
         val requestInfo = "Name: $name\n" +
                 "Link: $link"
         println(requestInfo)

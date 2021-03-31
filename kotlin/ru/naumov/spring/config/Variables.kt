@@ -1,4 +1,4 @@
-package ru.naumov.spring.server
+package ru.naumov.spring.config
 
 // Variables file
 // There are constants and other variables (URIs, Classes etc.)
@@ -35,4 +35,11 @@ const val urb = "&type=meetup-join&deeplinkId="
 const val urc = "&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true"
 
 //link example: http://localhost:8080/connect?name=Denis&mode=meet&url=meetup-join%2F19%3Ameeting_YWQ1ZGUyNzItY2NiYi00MTNjLWE4NTgtY2VhNjMxMTE0ZTli%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522dcb67d46-35b2-47d7-a41c-5507eb550715%2522%252c%2522Oid%2522%253a%25225f66540d-66cd-4980-9e04-7859066f90e5%2522%257d%26anon%3Dtrue&deepLinkId=b32e543f-6371-4f7b-89d5-754f93b48ed8
+//old link
+
+
+//new links
+//https://teams.microsoft.com/l/meetup-join/19:meeting_MzNhZThkZWMtYjU5YS00ZDY3LTliZjUtODZjYTZiZjc1ODY5@thread.v2/0?context=%7B%22Tid%22:%22dcb67d46-35b2-47d7-a41c-5507eb550715%22,%22Oid%22:%22eb990961-64fe-4ab1-89ea-066dcce98965%22%7D
+//http://localhost:8080/connect?name=Denis&mode=meet&deepLinkId=0&url=meetup-join/19:meeting_MzNhZThkZWMtYjU5YS00ZDY3LTliZjUtODZjYTZiZjc1ODY5@thread.v2/0?context=%7B%22Tid%22:%22dcb67d46-35b2-47d7-a41c-5507eb550715%22,%22Oid%22:%22eb990961-64fe-4ab1-89ea-066dcce98965%22%7D
+
 
